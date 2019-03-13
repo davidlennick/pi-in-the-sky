@@ -12,18 +12,16 @@ a quick demo project for a presentation
 - build and push :)
 ```
 
+Uses a DHT11 (GPIO pin 17) and SSD1306 128x64 (I2C)
+http://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
+https://www.raspberrypi-spy.co.uk/2018/04/i2c-oled-display-module-with-raspberry-pi/
+
 
 install balenaOS on pi: https://www.balena.io/os/
-
 
 https://www.balena.io/os/docs/raspberrypi3/getting-started/
 
 https://www.balena.io/docs/learn/develop/hardware/gpio/
-
-
-http://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-the-raspberry-pi/
-
-
 
 
 ## stuff
@@ -43,7 +41,7 @@ http://192.168.43.126:8888/dht11
 
 while true; do curl http://192.168.43.126:8888/dht11; sleep .5; printf "\n"; done
 
+balena ps
+balena inspect --format='{{.HostConfig.Privileged}}' c4709f5f1b6e
+
 ```
-
-
-- for some reason, compose file isn't working as expected... can't access GPIO pins? works when running the container directly
