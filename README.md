@@ -44,4 +44,8 @@ while true; do curl http://192.168.43.126:8888/dht11; sleep .5; printf "\n"; don
 balena ps
 balena inspect --format='{{.HostConfig.Privileged}}' c4709f5f1b6e
 
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 8fa0dd379303550f23073f64e234d2dc63c73248
